@@ -1,6 +1,9 @@
 
 import React from 'react'
 import "./App.css"
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Admin from './pages/admin/Admin';
 import ShowCustomers from './pages/customer/showCustomer';
@@ -28,49 +31,18 @@ import DeleteSweetOrder from './pages/sweetOrder/DeleteSweetOrder/deleteSweetOrd
 
 
 function App () {
+  // handling product list for display
+  const [productData, setProductData] = useState([]);
+
+  // handling getAllProducts error for display
+  const [errorData, setErrorData] = useState("");
   
-  const products = [
-    { 
-      photo:`${images.image11}`,
-      title: "Chocolate Donuts",
-      price: 120
-    },
-    {
-      photo:`${images.image12}`,
-      title: "Creamy Buns",
-      price: 99
-    },
-    {
-      photo:`${images.image13}`,
-      title: "Gulab Jamun",
-      price: 150
-    },
-    {
-      photo:`${images.image14}`,
-      title: "Laddu",
-      price: 60
-    },
-    {
-      photo:`${images.image15}`,
-      title: "Choco Ice cream",
-      price: 100
-    },
-    {
-      photo:`${images.image16}`,
-      title: "Butterscotch cake",
-      price: 450
-    },
-    {
-      photo:`${images.image17}`,
-      title: "Barfi",
-      price: 200
-    },
-    {
-      photo:`${images.image18}`,
-      title: "Vanila Cone",
-      price: 80
-    }
-  ]
+  useEffect(() => {
+    axios
+        .get("http://localhost:2081/api/v1/product")
+        .then((response) => setProductData(response.data))
+        .catch((error) => setErrorData(error.response.data.errorMessage));
+  }, []);
   return (
     <div className='App'>
     <BrowserRouter>
@@ -78,11 +50,11 @@ function App () {
       <Routes>
       <Route path='/' element ={<Home/>}></Route>  
       <Route path='/admin' element ={<Admin/>}></Route>
-      {/* <Route path ='/orders' element={<ShowOrders/>}></Route> */}
+      <Route path ='/orders' element={<ShowOrders/>}></Route>
       <Route path='/showUsers' element ={<ShowUsers/>}></Route>
       <Route path='/users' element ={<User/>}></Route>
       <Route path='/deleteUser' element ={<DeleteUser/>}></Route> 
-      <Route path='/payment' element ={<Payment/>}></Route>  
+      <Route path='/payment' element ={<Payment/>}></Route>
       <Route path='/product' element ={<Product/>}></Route>
       <Route path='/register' element ={<BasicSignUp/>}></Route> 
       <Route path='/login' element ={<BasicLogin/>}></Route>
@@ -91,7 +63,7 @@ function App () {
       <Route path='/showCustomers' element ={<ShowCustomers/>}></Route> 
       <Route path='/deleteCustomer' element ={<DeleteCustomer/>}></Route>
       <Route path='/cart' element ={<Cart/>}></Route>
-      <Route path='/products' element ={<Products products={products}/>}></Route>
+      <Route path='/products' element ={<Products products={productData}/>}></Route>
       <Route path='/orders' element ={<SweetOrder/>}></Route>
       <Route path='/showAllSweetOrder' element ={<ShowAllSweetOrder/>}></Route>
       <Route path='/addSweetOrder' element ={<AddSweetOrder/>}></Route>
