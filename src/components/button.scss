@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 
- .alink{
+ .my-btn-alink{
     display: block;
     width: 110px;
     height: 30px;
@@ -19,26 +19,26 @@
     transition: all .35s;
   }
   
-  .alink span{
+  .my-btn-alink span{
     position: relative;
     z-index: 10;
   }
   
-  .alink:after{
+  .my-btn-alink:after{
     position: absolute;
     content: "";
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background: #1f1f1f;
+    background: lightseagreen;
     transition: all .35s;
   }
   
-  .alink:hover{
+  .my-btn-alink:hover{
     color: #ffffff;
   }
   
-  .alink:hover:after{
+  .my-btn-alink:hover:after{
     width: 100%;
   }

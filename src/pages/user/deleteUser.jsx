@@ -1,65 +1,69 @@
-import Table from 'react-bootstrap/Table';
+
+import {useState,useEffect} from "react";
+import axios from 'axios';
+import { Table} from 'react-bootstrap';
 import UserDelTable from "./userDelTable";
-import axios from "axios";
-import { useEffect,useState } from "react";
 import "./table.scss"
-import {Link} from 'react-router-dom'
-import Button from "../../components/Button"; 
 
-function DeleteUser() {
 
-    
+function DeleteUser(){
+
     const [users, setUsers] = useState([]);
-    
 
-    useEffect(() => {
+    useEffect(()=>{
         loadUsers();
     },[])
 
-    const loadUsers = async () => {
-        const result = await axios.get("http://localhost:2097/api/v1/user");
-        setUsers(result.data);
+    const loadUsers = async ()=>{
+      const response = await axios.get("http://localhost:2097/api/v1/user");
+      setUsers(response.data);
+      console.log(response);
     }
 
-    const deleteUser = async userId =>{
-        await axios.delete("http://localhost:2097/api/v1/user/${userId}");
-            loadUsers();
-    };
+    const deleteUser = async (id)=>{
+        await axios.delete(`http://localhost:2097/api/v1/user/${id}`);
+        loadUsers();
+    }
 
     
 
-    return (
-        <div>
-            <h1>User List</h1> 
+
+    return(
+        <div className='table-wrapper'>
+            <h1>Delete User</h1>
             <br></br>
-            <Table bordered striped hover variant="dark" >
+
+            {/* {
+                errorData !== "" && <Alert variant='danger'>{errorData}</Alert>
+            } */}
+
+            <Table bordered striped hover shadow className='text-center'>
                 <thead>
-                    <tr>
-                    <th >#</th>
+                    <tr className='thead-dark'>
+                        <th >#</th>
                         <th >User Id</th>
-                        <th>Type</th>
-                        <th>User Name</th>
+                        <th>Name</th>
                         <th>Action</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    
-                    {users.map((user,index) => {
+                    {users.map((user, index) => {
                         return (
-                            <tr>
-                                <th scope='row'>{index + 1}</th>
-                                <td>{user.userId}</td>
-                                <td>{user.type}</td>
-                                <td>{user.userName}</td>
-                                <td><Link className="btn btn-danger" onClick={() => deleteUser(user.userId)}>Delete</Link></td>
-                            </tr>
+                            <UserDelTable
+                                index={index + 1}
+                                userId={user.userId}
+                                type={user.type}
+                                userName={user.userName}
+                                deleteUser={deleteUser}
+                            >
+                            </UserDelTable>
                         )
                     })}
                 </tbody>
             </Table>
+
         </div>
-
-
     )
 }
 

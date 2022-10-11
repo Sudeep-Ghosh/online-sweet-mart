@@ -1,0 +1,37 @@
+.sweetorder-list-wrapper > h1{
+    background-color: darkcyan;
+    margin-right: 0vw;
+    width: 100vw;
+    margin-top: 0px;
+    position: relative;
+
+}
+.sweetorder-table{
+    border: 2px black ;
+    border-radius: 1px;
+    font-size: medium;
+    position: fixed;
+    margin-left: 31vw ;
+    margin-top: 2vh;
+    background-color: white;
+    justify-content: center;
+    width: 40vw;
+    height: max-content;
+    
+  
+}
+.sweetorder-table > thead {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    }
+.sweetorder-table > tbody{
+    background-color: lightcyan;
+    color: black;
+}
+
+.sweetorder-list-wrapper{
+    height: auto;
+    position: relative;
+    background-color: aliceblue;
+}

@@ -9,7 +9,7 @@ const Payment = () => {
         <Navbar/>
         <div className='section'>
         <div className='cart-block payment'> 
-            <h1>Your Payment has been made <span style={{color: 'green'}}>Successfully.</span> <br/> <br/><Button value="Shop More" href='products'/> </h1>
+            <h1><span style={{color: 'black'}}>Your Payment has been made</span> <span style={{color: 'green'}}>Successfully.</span> <br/> <br/><Button value="Shop More" href='products'/> </h1>
             
         </div>
         <div className='order'>

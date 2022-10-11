@@ -1,0 +1,91 @@
+.deleteSweetOrder-wrapper{
+    background-color: aliceblue;
+    height: 80vh;
+    position: fixed;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flexbox;
+}
+h2{
+    align-content: center;
+    justify-self: center;
+   text-align: center;
+    position: relative;
+}
+.deleteSweetOrderForm{
+    background-color: lavender;
+    position: fixed;
+    margin-top: auto;
+    margin-left: 40vw;
+    
+    
+    padding: 5px;
+
+    border: 2px black;
+    border-radius: 2px;
+    justify-content: space-around;
+    display: flexbox;
+    width: auto;
+
+    
+}
+label{
+    margin-right: 10px;
+}
+.sweet-btn{
+    margin-left: 50%;
+    margin-top: 20px;
+    padding: 6px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+}
+.field1{
+    height: 5vh;
+}.deleteSweetOrder-wrapper{
+    background-color: aliceblue;
+    height: 80vh;
+    position: fixed;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flexbox;
+}
+h2{
+    align-content: center;
+    justify-self: center;
+   text-align: center;
+    position: relative;
+}
+.deleteSweetOrderForm{
+    background-color: lavender;
+    position: fixed;
+    margin-top: auto;
+    margin-left: 40vw;
+    
+    
+    padding: 5px;
+
+    border: 2px black;
+    border-radius: 2px;
+    justify-content: space-around;
+    display: flexbox;
+    width: auto;
+
+    
+}
+label{
+    margin-right: 10px;
+}
+.sweet-btn{
+    margin-left: 50%;
+    margin-top: 20px;
+    padding: 6px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+}
+.field1{
+    height: 5vh;
+}

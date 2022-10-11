@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-        <div className="navbar">
+        <div className="sweet-navbar">
             <Link className='logo' to='/'><i class="fa-solid fa-bag-shopping" style={{ color:"#333", fontSize:'30px'}}><span className='span'>SweetMart</span></i></Link>
             <input type="search" name="" id="" placeholder='Search' className='search'/>
             { user ?
@@ -21,8 +21,8 @@ const Navbar = () => {
             </Link>
             <Button value='logout' /> </div>
             :
-            <div className=' signup-links btn'>
-              <Button value="Register" href="register"/>
+            <div className=' signup-links bttn'>
+              <Button value="SignUp" href="register"/>
               <Button value="Login" href="login" />
             </div>
             }

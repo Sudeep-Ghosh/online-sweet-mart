@@ -1,0 +1,32 @@
+
+/* body{
+    /* background-color: rgb(245, 236, 226); 
+     background-image: linear-gradient(to right, #e2e2e2, #f0e9e9); 
+    background-color: rgb(245, 236, 229);
+}  */
+
+
+
+.customer-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10rem;
+    background-image: url("https://images.pexels.com/photos/5711392/pexels-photo-5711392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.button-style{
+    margin:1.5rem;
+}

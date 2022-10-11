@@ -11,11 +11,12 @@ const User = () => {
     <h1><span style={{color:"#85a3e0"}}>Hey!</span> Here's some Data for you.</h1>
     <div className='section log'> 
       <div className='logImg'>
-        <img src={images.image4} alt="" />
+        {/* <img src={images.image4} alt="" /> */}
       </div>
           <div className=' user-links btn'>
               <Button value="Show Users" href="showUsers"/>
               <Button value="Delete User" href="deleteUser" />
+              
           </div>
     </div>
     </>

@@ -19,7 +19,7 @@
     padding-left: 0%;
 }
 
-input[type="number"]{
+.payment-input{
     margin-top: 10px;
     outline: none;
     border: 1px solid black;
