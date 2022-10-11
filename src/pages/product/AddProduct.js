@@ -64,7 +64,7 @@ function AddProduct() {
                                 isValid,
                                 errors,
                             }) => (
-                                <Form noValidate onSubmit={handleSubmit}>
+                                <Form noValidate onSubmit={handleSubmit} className='product-cust-form'>
                                     <Row className="mb-3">
                                         <Form.Group as={Col} md="4" controlId="validationFormik01">
                                             <Form.Label>Product Name</Form.Label>

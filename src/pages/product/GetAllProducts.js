@@ -18,7 +18,7 @@ function GetAllProducts() {
             .get("http://localhost:2081/api/v1/product")
             .then((response) => setProductData(response.data))
             .catch((error) => setErrorData(error.response.data.errorMessage));
-    }, []);
+    });
 
     return (
         <Col className='prd-col'>

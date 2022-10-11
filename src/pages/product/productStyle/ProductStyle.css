@@ -57,11 +57,15 @@ for bootstrap */
     margin-bottom: 2vh;
 }
 
-Form{
+.product-cust-form{
     margin: 10px;
 }
 
-Table{
+.form-label{
+    font-size: small;
+}
+
+.product-table{
     margin-top: 5px;
 }
 
