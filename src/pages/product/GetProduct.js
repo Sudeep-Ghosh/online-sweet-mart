@@ -13,7 +13,7 @@ const schema = yup.object().shape({
 
 function GetProduct() {
     const [open, setOpen] = useState(false);
-    const [show, setShow] = useState(true);
+    // const [show, setShow] = useState(true);
     const [isAvailable, setIsAvailable] = useState(false);
     
     const [product, setProduct] = useState();
@@ -71,7 +71,7 @@ function GetProduct() {
                                 isValid,
                                 errors,
                             }) => (
-                                <Form noValidate onSubmit={handleSubmit}>
+                                <Form noValidate onSubmit={handleSubmit} className='product-cust-form'>
                                     <Row className="mb-3">
                                         <Form.Group as={Col} md="4" controlId="validationFormik02">
                                             <Form.Label>Product ID</Form.Label>
@@ -98,7 +98,7 @@ function GetProduct() {
                         {
                             isAvailable && 
                         
-                        <Table striped responsive bordered hover variant="dark">
+                        <Table className='product-table' striped responsive bordered hover variant="dark">
                             <thead>
                                 <tr>
                                     <th>Product ID</th>

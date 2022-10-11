@@ -78,7 +78,7 @@ function UpdateProduct() {
                                 isValid,
                                 errors,
                             }) => (
-                                <Form noValidate onSubmit={handleSubmit}>
+                                <Form noValidate onSubmit={handleSubmit} className='product-cust-form'>
                                     <Row className="mb-3">
                                         <Form.Group as={Col} md="4" controlId="validationFormik02">
                                             <Form.Label>Product ID</Form.Label>
