@@ -126,12 +126,14 @@ function AddProduct() {
                                                 placeholder="Eg: Amazing and delicious sweets"
                                                 value={values.description}
                                                 onChange={handleChange}
+                                                isValid={touched.description && !errors.description}
                                                 isInvalid={!!errors.description}
                                             />
 
                                             <Form.Control.Feedback type="invalid">
                                                 {errors.description}
                                             </Form.Control.Feedback>
+                                            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                         </Form.Group>
                                         
                                         

@@ -1,5 +1,6 @@
 body {
-    background-image: linear-gradient(to right, #e2e2e2, #f0e9e9);
+    background-image: linear-gradient(to right, #949393, #f0eeee);
+    
 }
 
 .title-head{
@@ -7,6 +8,7 @@ body {
 }
 .product-wrapper {
     margin-top: 70px;
+    
 }
 
 /* overriding placeholder font size
@@ -67,6 +69,14 @@ for bootstrap */
 
 .product-table{
     margin-top: 5px;
+}
+
+label.form-check-label{
+    font-size: small;
+}
+
+input.form-control{
+    font-size: small;
 }
 
 .card-section > h3{
